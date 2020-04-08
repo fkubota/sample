@@ -1,5 +1,13 @@
+// module.exports = {
+//   outputDir: "docs",
+//   assetsDir: "./",
+//   publicPath: "/"
+// };
+//
+
 module.exports = {
-  outputDir: "docs",
-  assetsDir: "./",
-  publicPath: "/"
-};
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/resume/'
+  : '/',
+  outputDir: 'docs',
+}
